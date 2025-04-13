@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Change Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h2 {
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            text-align: left;
+        }
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .prediction {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Career Change Prediction</h2>
+        <form action="/predict" method="post">
+            <label for="Field of Study">Field of Study:</label>
+            <select name="Field of Study" required>
+                <option value="Medicine">Medicine</option>
+                <option value="Education">Education</option>
+                <option value="Arts">Arts</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Business">Business</option>
+                <option value="Mechanical Engineering">Mechanical Engineering</option>
+                <option value="Biology">Biology</option>
+                <option value="Law">Law</option>
+                <option value="Economics">Economics</option>
+                <option value="Psychology">Psychology</option>
+            </select>
+            
+            <label for="Current Occupation">Current Occupation:</label>
+            <select name="Current Occupation" required>
+                <option value="Business Analyst">Business Analyst</option>
+                <option value="Economist">Economist</option>
+                <option value="Biologist">Biologist</option>
+                <option value="Doctor">Doctor</option>
+                <option value="Lawyer">Lawyer</option>
+                <option value="Software Developer">Software Developer</option>
+                <option value="Artist">Artist</option>
+                <option value="Psychologist">Psychologist</option>
+                <option value="Teacher">Teacher</option>
+                <option value="Mechanical Engineer">Mechanical Engineer</option>
+            </select>
+            
+            <label for="Age">Age:</label>
+            <input type="text" name="Age" required>
+            
+            <label for="Gender">Gender:</label>
+            <select name="Gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            
+            <label for="Years of Experience">Years of Experience:</label>
+            <input type="text" name="Years of Experience" required>
+            
+            <label for="Education Level">Education Level:</label>
+            <select name="Education Level" required>
+                <option value="High School">High School</option>
+                <option value="Master's">Master's</option>
+                <option value="PhD">PhD</option>
+                <option value="Bachelor's">Bachelor's</option>
+            </select>
+            
+            <label for="Industry Growth Rate">Industry Growth Rate:</label>
+            <select name="Industry Growth Rate" required>
+                <option value="High">High</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+            </select>
+            
+            <label for="Job Satisfaction">Job Satisfaction:</label>
+            <input type="text" name="Job Satisfaction" required>
+            
+            <label for="Work-Life Balance">Work-Life Balance:</label>
+            <input type="text" name="Work-Life Balance" required>
+            
+            <label for="Job Opportunities">Job Opportunities:</label>
+            <input type="text" name="Job Opportunities" required>
+            
+            <label for="Salary">Salary:</label>
+            <input type="text" name="Salary" required>
+            
+            <label for="Job Security">Job Security:</label>
+            <input type="text" name="Job Security" required>
+            
+            <label for="Career Change Interest">Career Change Interest:</label>
+            <input type="text" name="Career Change Interest" required>
+            
+            <label for="Skills Gap">Skills Gap:</label>
+            <input type="text" name="Skills Gap" required>
+            
+            <label for="Family Influence">Family Influence:</label>
+            <select name="Family Influence" required>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+                <option value="None">None</option>
+            </select>
+            
+            <label for="Mentorship Available">Mentorship Available:</label>
+            <input type="text" name="Mentorship Available" required>
+            
+            <label for="Certifications">Certifications:</label>
+            <input type="text" name="Certifications" required>
+            
+            <label for="Freelancing Experience">Freelancing Experience:</label>
+            <input type="text" name="Freelancing Experience" required>
+            
+            <label for="Geographic Mobility">Geographic Mobility:</label>
+            <input type="text" name="Geographic Mobility" required>
+            
+            <label for="Professional Networks">Professional Networks:</label>
+            <input type="text" name="Professional Networks" required>
+            
+            <label for="Career Change Events">Career Change Events:</label>
+            <input type="text" name="Career Change Events" required>
+            
+            <label for="Technology Adoption">Technology Adoption:</label>
+            <input type="text" name="Technology Adoption" required>
+            
+            <button type="submit">Predict</button>
+        </form>
+        
+        <div class="prediction">{{ prediction_text }}</div>
+    </div>
+</body>
+</html>
