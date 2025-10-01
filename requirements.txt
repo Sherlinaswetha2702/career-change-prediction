@@ -4,8 +4,7 @@ Flask==2.3.2
 # Machine Learning and Data Processing
 numpy==1.26.4
 pandas==2.0.3
-scikit-learn==1.3.0
-
+scikit-learn==1.6.1
 
 # Model Serialization
 pickle-mixin==1.0.2
